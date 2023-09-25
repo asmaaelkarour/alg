@@ -1,0 +1,26 @@
+VAR: length, n_v, n_w, i: INTEGER
+tab[]: CHAR
+n_v := 0
+n_w := 0
+i := 0 
+sentence: CHAR
+
+BEGIN:
+    READ(sentence)
+   
+    WHILE (tab[i] <> '.') DO
+        tab[i] := sentence[i]
+        i := i + 1
+        
+        IF (tab[i] = 'a' OR tab[i] = 'o' OR tab[i] = 'u' OR tab[i] = 'i') THEN
+            n_v++
+        ELSE IF (tab[i] = ' ') THEN
+            n_w ++
+        ENDIF
+    ENDWHILE
+    
+    length := i  
+   read(length)
+    read(n_v)
+    read(n_w)
+END
